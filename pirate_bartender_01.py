@@ -54,16 +54,18 @@ def MixDrink(answers):
             drink.append(random.choice(ingredients[key]))
 
             #print("Ingredient added:")
-    print("drink will contain: "+str(drink))
+    #print("drink will contain: "+str(drink))
             
     return drink
             
+if __name__ == '__main__':
+    
+    OrderDrink(answers)
 
-OrderDrink(answers)
-#print("Answers returned:")
-#print(answers)
+    #print(answers)
 
-drink = MixDrink(answers) 
-#Variables cannot be accessed outside the scope of a function they were defined in.
-#so we create a variable with the same name outside of the MixDrink() and print that
-print(drink)
+    drink = MixDrink(answers) 
+    #Variables cannot be accessed outside the scope of a function they were defined in.
+    #so we create a variable with the same name outside of the MixDrink() and print that
+    print("Drink will contain: "+str(drink))
+    #print(drink)
