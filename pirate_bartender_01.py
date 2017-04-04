@@ -1,3 +1,7 @@
+import random
+
+#drink = [] #- shouldn't have to define this first?
+
 questions = {
     "strong": "Do ye like yer drinks strong?",
     "salty": "Do ye like it with a salty tang?",
@@ -12,7 +16,6 @@ answers = {"strong": False,
             "sweet": False,
             "fruity": False,
 }
-
 
 ingredients = {
     "strong": ["glug of rum", "slug of whisky", "splash of gin"],
@@ -29,19 +32,36 @@ def OrderDrink(answers):
     for key, question in questions.items():
         
         answer = input(question)
-        answer = str(answer)
+       
         
         if (answer == "y") or (answer == "Y"):
             answers[key] = True
-            print("True answer in OrderDrink function")
-            print(answers)
+            #print("True answer in OrderDrink function:")
+            #print(answers)
         else: 
             answers[key] = False
-            print("False answer in OrderDrink function")
-            print(answers)
+            #print("False answer in OrderDrink function:")
+            #print(answers)
         
-        return answers
+    return answers
+    
+def MixDrink(answers):
+    drink = []
+    
+    for key, answer in answers.items():## Question items() is a function of some kind? Unsure what it creates.
+        
+        if (answer == True):
+            drink.append(random.choice(ingredients[key]))
+
+            #print("Ingredient added:")
+    print("drink will contain: "+str(drink))
+            
+    return drink
+            
 
 OrderDrink(answers)
-print("Answers returned")
-print(answers)
+#print("Answers returned:")
+#print(answers)
+
+MixDrink(answers)
+print(drink) #why is the returned list empty??
