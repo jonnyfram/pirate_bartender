@@ -63,5 +63,7 @@ OrderDrink(answers)
 #print("Answers returned:")
 #print(answers)
 
-MixDrink(answers)
-print(drink) #why is the returned list empty??
+drink = MixDrink(answers) 
+#Variables cannot be accessed outside the scope of a function they were defined in.
+#so we create a variable with the same name outside of the MixDrink() and print that
+print(drink)
