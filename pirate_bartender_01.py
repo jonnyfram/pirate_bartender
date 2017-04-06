@@ -25,7 +25,6 @@ adjectives = [
 "Acid",
 "Chain",
 "Chairlift",
-"Chairman",
 "Goodie",
 "Goose",
 "Gopher",
@@ -106,9 +105,6 @@ def MixDrink(answers):
         if (answer == True):
             drink.append(random.choice(ingredients[key]))
 
-            #print("Ingredient added:")
-    #print("drink will contain: "+str(drink))
-            
     return drink
             
 if __name__ == '__main__':
@@ -121,5 +117,5 @@ if __name__ == '__main__':
     
     #Variables cannot be accessed outside the scope of a function they were defined in.
     #so we create a variable with the same name outside of the MixDrink() and print that
-    print("Arrr. One "+drink_name+" coming right up... Her ye arrrr... Drink up ya scurvy bum!")
-    print("Drink will contain: "+str(drink))
+    print("Arrr. One "+drink_name+" coming right up; "+", ".join(drink)+"... Here ye arrrr... Drink up ya scurvy bum!")
+    
