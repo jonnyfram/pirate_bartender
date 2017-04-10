@@ -1,3 +1,6 @@
+## thinkful exercise, creates drink based on input, asks the customer if he wants another, generates random cocktail name
+
+
 import random
 
 first_drink = True #Bool to check if first drink or not

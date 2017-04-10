@@ -1,11 +1,65 @@
 import random
+adjectives = ["battleship",
+"accident",
+"accordion",
+"accountant",
+"achiever",
+"acid",
+"chain",
+"chairlift",
+"chairman",
+"goodie",
+"goose",
+"gopher",
+"kangaroo",
+"karate",
+"karen",
+"kayak",
+"kazoo",
+"weedkiller",
+"week",
+"weekend",
+"weekender"]
 
-ingredients = {
-    "strong": ["glug of rum", "slug of whisky", "splash of gin"],
-    "salty": ["olive on a stick", "salt-dusted rim", "rasher of bacon"],
-    "bitter": ["shake of bitters", "splash of tonic", "twist of lemon peel"],
-    "sweet": ["sugar cube", "spoonful of honey", "spash of cola"],
-    "fruity": ["slice of orange", "dash of cassis", "cherry on top"],
-}
+nouns = [
+    'people',
+    'history',
+    'way',
+    'art',
+    'world',
+    'map',
+    'family',
+    'government',
+    'health',
+    'system',
+    'computer',
+    'meat',
+    'year',
+    'thanks',
+    'music',
+    'person',
+    'reading',
+    'method',
+    'data',
+    'food',
+    'understanding',
+    'theory',
+    'law',
+    'bird',
+    'literature',
+    'problem',
+    'software',
+    'control',
+    'knowledge',
+    'power',
+    'ability',
+    'economics',
+    'love']
 
-print(random.choice(ingredients["strong"]))
+def RandomDrinkName():
+   adjective = random.choice(adjectives)
+   noun = random.choice(nouns)
+   print(str(adjective)+" "+str(noun))
+   
+print(RandomDrinkName())
+    
